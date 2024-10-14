@@ -17,7 +17,7 @@ pip install -r requirements.txt
 We provide the training and testing scripts for each dataset individually.
 
 **Note:**
- - Replace [DATASET] with one of the following choices: [MSCOCO, GoogleEarth, VIS_NIR, VIS_IR] to run the scripts
+ - Replace [DATASET] with one of the following choices: [MSCOCO, GoogleEarth, VIS_NIR, VIS_IR].
  - Revise the DATASET_ROOT_PATH in the script to your own data path. 
 
 1. train
