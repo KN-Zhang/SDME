@@ -25,7 +25,7 @@ We provide the training and testing scripts for each dataset individually.
 cd scripts/train/ && \
 bash train_[DATASET].sh 
 ```
-2. test
+2. test (pre-trained checkpoints are provided in checkpoints/)
 ```
 cd scripts/test/ && \
 bash test_[DATASET].sh 
