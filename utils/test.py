@@ -1,8 +1,5 @@
-import numpy as np
 import kornia
 import torch
-import torchgeometry as tgm
-
 
 def mnn_matcher(descriptors_a, descriptors_b):
     device = descriptors_a.device
@@ -17,7 +14,7 @@ def mnn_matcher(descriptors_a, descriptors_b):
 def initial_H_vanilla():
     src_points = torch.tensor([[0, 0], [127, 0], [127, 127], [0, 127]]).float()
     tgt_points = torch.tensor([[32, 32], [160, 32], [160, 160], [32, 160]]).float()
-    H = tgm.get_perspective_transform(src_points.unsqueeze(0), tgt_points.unsqueeze(0)).float()
+    H = kornia.geometry.get_perspective_transform(src_points.unsqueeze(0), tgt_points.unsqueeze(0)).float()
 
     return H
 
