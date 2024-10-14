@@ -1,0 +1,38 @@
+Trainer:
+  lr: 0.0001
+  weight_decay: 0.0005
+  epoch: 100
+  batch_size: 8
+
+Model:
+  conv:
+    inchan: 3
+    mchan: 4
+    ochan: 128
+    dilated: True
+    dilation: 1
+  transformer:
+    d_model: 128
+    nhead: 8
+    layer_names: ['self']
+    attention: 'linear'
+  agents:
+    num: 32
+    dim: 128
+
+Loss:
+  sparse:
+    loss:
+      MultiLoss(
+          1, PixelAPLoss(`sampler`, nq=20),
+          5, CosimLoss(N=`N`),
+          1, PeakyLoss(N=`N`),    
+          0.008, DenseGuidedLoss(),
+          1, AgentLoss()
+          )
+    sampler:
+      NghSampler2(ngh=7, subq=-8, subd=1, pos_d=3, neg_d=5, border=16,
+                                  subd_neg=-8, maxpool_pos=True)
+    patch_size:
+      16
+  

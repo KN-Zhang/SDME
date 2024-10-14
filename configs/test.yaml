@@ -1,0 +1,22 @@
+Extractor:
+  top_k: 1000
+  scale_f: 1.1892
+  min_scale: 0
+  max_scale: 1
+  repeatability_thr: 0
+
+Model:
+  conv:
+    inchan: 3
+    mchan: 4
+    ochan: 128
+    dilated: True
+    dilation: 1
+  transformer:
+    d_model: 128
+    nhead: 8
+    layer_names: ['self']
+    attention: 'linear'
+  agents:
+    num: 32
+    dim: 128
