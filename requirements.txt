@@ -1,0 +1,6 @@
+wandb==0.16.1
+omegaconf==2.1.1
+opencv-python==4.6.0.66
+numpy==1.23.1
+tqdm==4.65.0
+kornia==0.7.2
