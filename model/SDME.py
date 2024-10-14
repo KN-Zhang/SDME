@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import copy
 from model.transformer import LocalFeatureTransformer
-from positional_encodings.torch_encodings import PositionalEncoding1D, Summer
+
 class densemap_guided(nn.Module):
     def __init__(self):
         super().__init__()
