@@ -25,7 +25,7 @@ We provide the training and testing scripts for each dataset individually.
 cd scripts/train/ && \
 bash train_[DATASET].sh 
 ```
-3. test
+2. test
 ```
 cd scripts/test/ && \
 bash test_[DATASET].sh 
