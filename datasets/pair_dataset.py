@@ -3,7 +3,6 @@ import os, json, cv2
 import kornia
 import torch
 import torchvision.transforms as tvf
-import torchgeometry as tgm
 
 from PIL import Image
 from torch.utils.data import Dataset
@@ -57,7 +56,7 @@ class PairDataset(Dataset):
         src_points = torch.tensor([[0,0], [127,0], [127,127], [0,127]]).float()
         tgt_points = torch.stack([torch.tensor(u), torch.tensor(v)], dim=-1).float()
 
-        H = tgm.get_perspective_transform(src_points.unsqueeze(0), tgt_points.unsqueeze(0))
+        H = kornia.geometry.get_perspective_transform(src_points.unsqueeze(0), tgt_points.unsqueeze(0))
         
         return H.squeeze(0), tgt_points
     
