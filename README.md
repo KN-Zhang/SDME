@@ -12,3 +12,21 @@ conda install pytorch==2.0.0 torchvision==0.15.0 torchaudio==2.0.0 pytorch-cuda=
 ```
 pip install -r requirements.txt
 ```
+
+# Usage
+We provide the training and testing scripts for each dataset individually.
+
+**Note:**
+ - Replace [DATASET] with one of the following choices: [MSCOCO, GoogleEarth, VIS_NIR, VIS_IR] to run the scripts
+ - Revise the DATASET_ROOT_PATH in the script to your own data path. 
+
+1. train
+```
+cd scripts/train/ && \
+bash train_[DATASET].sh 
+```
+3. test
+```
+cd scripts/test/ && \
+bash test_[DATASET].sh 
+```
