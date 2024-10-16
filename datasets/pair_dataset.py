@@ -33,7 +33,7 @@ class PairDataset(Dataset):
                 self.label_path = os.path.join(self.data_path, self.name, 'train_small_size/label')
                 self.template_path = os.path.join(self.data_path, self.name, 'train_small_size/NIR')
             else:
-                self.img_name = open(os.path.join(self.data_path, self.name, 'test_small_size/test_list.txt')).read().split('\n')
+                self.img_name = os.listdir(os.path.join(self.data_path, self.name, 'test_small_size/NIR/'))
                 self.input_path = os.path.join(self.data_path, self.name, 'test_small_size/VIS')
                 self.label_path = os.path.join(self.data_path, self.name, 'test_small_size/label')
                 self.template_path = os.path.join(self.data_path, self.name, 'test_small_size/NIR')                
@@ -44,7 +44,7 @@ class PairDataset(Dataset):
                 self.label_path = os.path.join(self.data_path, self.name, 'train_small_size/label')
                 self.template_path = os.path.join(self.data_path, self.name, 'train_small_size/IR')
             else:
-                self.img_name = open(os.path.join(self.data_path, self.name, 'test_small_size/test_list.txt')).read().split('\n')
+                self.img_name = os.listdir(os.path.join(self.data_path, self.name, 'test_small_size/IR/'))
                 self.input_path = os.path.join(self.data_path, self.name, 'test_small_size/VIS')
                 self.label_path = os.path.join(self.data_path, self.name, 'test_small_size/label')
                 self.template_path = os.path.join(self.data_path, self.name, 'test_small_size/IR')
