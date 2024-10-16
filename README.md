@@ -14,6 +14,25 @@ pip install -r requirements.txt
 ```
 
 # Datasets
+1. Create your own DATASET_ROOT_PATH.
+2. Put each dataset under DATASET_ROOT_PATH. The final file structure is like:
+```
+- DATASET_ROOT_PATH/
+ - MSCOCO/
+ - GoogleEarth/
+ - VIS_NIR/
+ - VIS_IR_drone/
+```
+
+**Download link:**
+
+MSCOCO, GoogleEarth: download as the instructions of [DeepLK](https://github.com/placeforyiming/CVPR21-Deep-Lucas-Kanade-Homography)
+
+[VIS_NIR]()
+
+[VIS_IR_drone]()
+
+
 
 # Usage
 We provide the training and testing scripts for each dataset individually.
