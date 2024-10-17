@@ -28,9 +28,9 @@ pip install -r requirements.txt
 
 MSCOCO, GoogleEarth: download as the instructions of [DeepLK](https://github.com/placeforyiming/CVPR21-Deep-Lucas-Kanade-Homography)
 
-[VIS_NIR]()
+[VIS_NIR](https://drive.google.com/file/d/1h7aTwmQL9xrVgWjEhdSIgmJAT6oJy4NB/view?usp=drive_link)
 
-[VIS_IR_drone]()
+[VIS_IR_drone](https://drive.google.com/file/d/1h7aTwmQL9xrVgWjEhdSIgmJAT6oJy4NB/view?usp=drive_link)
 
 
 
@@ -51,3 +51,17 @@ bash train_[DATASET].sh
 cd scripts/test/ && \
 bash test_[DATASET].sh 
 ```
+
+# Citation
+```
+@inproceedings{zhangsparse,
+  title={Sparse-to-dense Multimodal Image Registration via Multi-Task Learning},
+  author={Zhang, Kaining and Ma, Jiayi},
+  booktitle={Proceedings of the International Conference on Machine Learning},
+  pages={59490--59504},
+  year={2024}
+}
+```
+
+# Acknowledgement
+The codes are based on [R2D2](https://github.com/naver/r2d2) and [MultiObjectiveOptimization](https://github.com/isl-org/MultiObjectiveOptimization), we thank the authors for the contribution.
